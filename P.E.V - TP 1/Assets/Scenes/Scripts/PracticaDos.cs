@@ -9,6 +9,15 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
 
+        float val1 = UnityEngine.Random.Range(-100.0f, 100.0f);
+        float val2 = UnityEngine.Random.Range(-100.0f, 100.0f);
+        float val3 = UnityEngine.Random.Range(-100.0f, 100.0f);
+
+        // Dejo este por acá para testear la validación del mayor fuera de rango
+        // float val3 = UnityEngine.Random.Range(-100.0f, 120.0f);
+
+        string promedio = Promedio(val1, val2, val3);
+        Debug.Log(promedio);
     }
 
     // Update is called once per frame
