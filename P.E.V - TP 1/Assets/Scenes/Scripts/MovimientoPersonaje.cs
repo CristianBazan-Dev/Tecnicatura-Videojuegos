@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
+    // Ejercicio 4:  Movimiento y Salto de un Personaj
+    // Se parte haciendo selección sobre el rigidBody2D de la escena que, en este caso, sería el personaje (Ahí me queda duda de si sería mejor obtener por Tag)
+    // Tomando el input horizontal, nativo de Unity C#, aplicamos el Vector2 para darle velocidad sobre ese eje
+    // El salto se valida a través del chequeo del isGrounded. Si hay colisión entre el personaje y el piso, dada por el collider, se sabe que el persoanje estará sobre el piso (con tag Ground)
+
+    // Aprovechando que es de tipo booleano, se cambia su estado para, al ingresar el input de salto, se chequee que el personaje está en colisión con el piso.
+    // El salto aplica fuerza de salto sobre el eje y, para que el personaje realice el movimiento en esa dirección manteniendose estable sobre el eje x.
+    // Añadí de yapa el esbozo de un incrementador de fuerza de salto por conteo de salto (por motivos de experimentación con la funcionalidad)
     public float movementSpeed = 5f;
     public float jumpForce = 5f;
     public Rigidbody2D rb;
